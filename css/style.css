@@ -1,0 +1,1022 @@
+/*Imports*/
+
+@import url(normalize.css);
+@import url(css/font-awesome.min.css);
+
+/**/
+
+* {
+    box-sizing: border-box;
+    transition: ease all 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+a {
+    color: #1f1f1f;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: normal;
+    color: #111111;
+    margin: 0
+}
+
+h1 {
+    font-size: 24px
+}
+
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    font-size: 18px
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    margin: 20px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 20px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+
+.header_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/banner-bg.png);
+    height: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.header_bg {
+    background: #111;
+    border-bottom: 1px solid #fc95c4;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.ml-auto,
+.mx-auto {
+    margin: 0 auto;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 3px 15px;
+    font-size: 18px;
+    color: #a7a6a6;
+    margin: 0px 6px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #e5e8e8;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e5e8e8;
+}
+
+.navbar-brand {
+    margin: 0px;
+    float: right;
+}
+
+.navbar-brand img{
+    width: 20%;
+    height: auto;
+}
+
+.navbar {
+    padding: 15px 0px;
+}
+
+/*Banner section*/
+
+.banner_section {
+    width: 100%;
+    float: left;
+    padding: 50px 0px 145px 0px;
+}
+
+.banner_img{
+    animation: appear 1000ms linear,donutFloat 3s ease-in-out infinite forwards,donutSpin 10s linear infinite forwards;
+    transform: scale(0.9);
+    position: absolute;
+}
+
+.banner_taital {
+    width: 30%;
+    font-size: 100px;
+    font-family: 'Cookie';
+    line-height: 90px;
+    color: #abadad;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner_text {
+    width: 70%;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #222222;
+    line-height: 32px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.started_text {
+    margin-left: 25%;
+    width: 170px;
+    float: left;
+    padding-top: 20px;
+}
+
+.started_text a{
+    width: 100%;
+    float: left;
+    padding: 8px 10px;
+    color: #ffffff;
+    background-color: #abadad;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.started_text a span{
+    z-index: 2;
+    position: relative;
+}
+
+.started_text a::after {
+    content: "";
+	width: 100%;
+	height: 300px;
+	background: #c7c9c9;
+	position: absolute;
+	z-index: 1;
+	top: -300px;
+	left: 0;
+	transition: .4s ease-in-out all;
+	border-radius: 0px 0px 300px 300px;
+}
+
+.started_text a:hover::after {
+    top: 0;
+}
+
+/* Animación de latido */
+@keyframes latidoBoton {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.05); /* Un poco más grande (el "latido") */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
+
+@keyframes donutSpin {
+    0% {
+        transform: translateX(0) translateY(0px) rotateZ(0deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotateZ(360deg);
+    }
+  }
+
+  @keyframes donutFloat {
+    0% {
+        transform: translateX(0) translateY(0px) rotateZ(0deg);
+    }
+    50% {
+        transform: translateX(0) translateY(-20px) rotateZ(0deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0px) rotateZ(0deg);
+    }
+  }
+
+/* product section start */
+
+.product_section {
+    width: 100%;
+    float: left;
+    padding: 90px 0px 0px 0px;
+}
+
+
+.product_taital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: #373736;
+    font-weight: bold;
+    position: relative;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.product_taital::after {
+    content: '';
+    width: 80px;
+    height: 6px;
+    background-color: #abadad;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* product section end */
+
+/* about section start */
+
+.about_section {
+    width: 100%;
+    float: left;
+    margin-bottom: 150px;
+    padding: 90px 0px 0px 0px;
+}
+
+.about_taital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    color: #373736;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    position: relative;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.about_taital::after {
+    content: '';
+    width: 80px;
+    height: 6px;
+    background-color: #abadad;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.about_text {
+    width: 100%;
+    float: left;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #373736;
+    margin-left: 0px;
+}
+
+.about_img {
+    width: 100%;
+    float: left;
+}
+
+.read_bt_1 {
+    width: 180px;
+    float: left;
+    margin-top: 20px;
+}
+
+.read_bt_1 a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fc95c4;
+    color: #ffffff;
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.read_bt_1 a:hover {
+    background-color: #1e1e1e;
+    color: #faf8f9;
+}
+
+
+/* about section end */
+
+/*social section start*/
+.social_section {
+    background-color: #111111;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23f4f2f7' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    width: 100%;
+    padding: 90px 0px 145px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_social_icon {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_social_icon ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    list-style: none;
+}
+
+.footer_social_icon li {
+    float: left;
+}
+
+.footer_social_icon li a {
+    float: left;
+    padding: 5px 10px;
+    background-color: #ee86b5;
+    color: #ffffff;
+    border-radius: 100%;
+    font-size: 19px;
+    margin-left: 15px;
+    width: 44px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer_social_icon li a:hover {
+    background-color: #fd60a7;
+    color: #ffffff;
+}
+
+/*social section end*/
+
+
+/* copyright section start */
+
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #262526;
+    height: 100px;
+}
+
+.copyright_text {
+    width: 100%;
+    line-height: normal;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 0px;
+    border-top: 1px solid #6d6d6d;
+}
+
+.copyright_text a {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.copyright_text a img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    
+    transition: filter 0.3s ease-in-out; /* Animación suave para el efecto de brillo */
+    
+    /* Estado inicial: sin brillo (filtro normal) */
+    filter: brightness(100%); /* 100% es el brillo normal de la imagen */
+}
+
+.copyright_text a img:hover {
+    filter: brightness(150%); /* Aumenta el brillo en un 50%. Puedes ajustar este valor. */
+}
+
+/* copyright section end */
+
+.margin_top90 {
+    margin-top: 90px;
+}
+
+/*to up button*/
+
+#irArribaBtn {
+    height: 45px;
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se mantiene fijo en la ventana */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Asegura que esté por encima de otros elementos */
+    border: none;
+    outline: none;
+    /*background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    /*color: white;*/
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    color: #212529;
+    background-color: #abadad;
+    border-color: #9e9c9d;
+    animation: latidoBoton 1.5s infinite ease-in-out;
+}
+
+#irArribaBtn:hover {
+    opacity: 1;
+    color: #212529;
+    background-color: #c7c9c9;
+    border-color: #d3cace;
+}
+
+#irArribaBtn i { /* Estilo para el icono (Font Awesome) */
+    margin-right: 0; /* Ajusta el margen si es necesario */
+}
+
+#irArribaBtn:focus {
+  color: #212529;
+  background-color: #ff6fb0;
+    border-color: #ff6fb0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 111, 176, .5);
+}
+
+/* Estilos para el botón de WhatsApp (fijo a la derecha y arriba del botón Ir Arriba) */
+#whatsappBtn {
+    display: inline-block;
+    position: fixed;
+    bottom: 70px; /* Ajusta la distancia desde la parte inferior para que esté arriba del botón Ir Arriba (20px del botón Ir Arriba + su altura aproximada + un espacio) */
+    right: 20px;
+    z-index: 98; /* Un poco menos que el botón Ir Arriba para que no lo tape si hay superposición */
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    font-size: 1em;
+    padding: 10px 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 15px; 
+    animation: latidoBoton 1.5s infinite ease-in-out;
+}
+
+#whatsappBtn:hover {
+    opacity: 1;
+}
+
+#whatsappBtn i {
+    font-size: 4.3em; /* Ajusta el tamaño del icono si es necesario */
+}
+
+/*Estilos del carrusel*/
+
+.subtitulo {
+    margin: 0;
+    color: #000;
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sabor { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+
+/* ------------------------- */
+/* Estilos de Materialize */
+/* ------------------------- */
+.carousel {
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+}
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 400px;
+    height: 400px;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/*.carousel .indicators .indicator-item {
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background: #36221c;
+}*/
+
+
+
+/*Grid images Style*/
+
+header {
+	padding: 40px 0;
+}
+
+header .categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header .categorias a {
+	color: #9B9B9B;
+	margin: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+header .categorias a.activo {
+	color: #000;
+}
+
+/* ------------------------- */
+/* Grid */
+/* ------------------------- */
+
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+
+.grid .item {
+	position: absolute;
+	display: block;
+	padding: 0;
+	margin: 10px;
+	width: calc(33.333333% - 20px);
+}
+
+.grid .item-contenido {
+	position: relative;
+}
+
+.grid .item img {
+	width: 100%;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+/* ------------------------- */
+/* Overlay */
+/* ------------------------- */
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.9);
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.overlay.activo {
+	display: flex;
+}
+
+.overlay img {
+	max-width: 100%;
+}
+
+.overlay .descripcion {
+	display: block;
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5px;
+	border-radius: 10px;
+	max-width: 50%;
+}
+
+.contenedor-img {
+	position: relative;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+
+@keyframes appear{
+    0% {
+        opacity: 0;
+        /* Al inicio de 'appear', la dona viene de la derecha y no está rotando ni flotando */
+        transform: translateX(100%) rotateZ(0deg) translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        /* Al final de 'appear', la dona está en su posición final de X, y lista para rotar/flotar */
+        transform: translateX(0) rotateZ(0deg) translateY(0px);
+    }
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 500px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+        height: 40px;
+        margin-left: -40px;
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 16px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+ /* Establecemos los colores de cada red social, aprovechando su class */
+	
+	
+	.social ul li .icon-whats {background: #25D366;}
+	.social ul li .icon-mail {background: #ae181f;}
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 50px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+    .footer_social_icon .carousel .card{
+        background: #222;
+        border-radius: 6px;
+        padding: 25px 35px;
+        text-align: center;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .footer_social_icon .carousel .card:hover{
+        background: #22A7F0;
+    }
+    .footer_social_icon .carousel .card .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .footer_social_icon .carousel .card:hover .box{
+        transform: scale(1.05);
+    }
+    .footer_social_icon .carousel .card .text{
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+    }
+    .footer_social_icon .carousel .card img{
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #22A7F0;
+        transition: all 0.3s ease;
+    }
+    .footer_social_icon .carousel .card:hover img{
+        border-color: #fff;
+    }
+    .owl-dots{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .owl-dot{
+        height: 13px;
+        width: 13px;
+        margin: 0 5px;
+        outline: none!important;
+        border-radius: 50%;
+        border: 2px solid #22A7F0!important;
+        transition: all 0.3s ease;
+    }
+    .owl-dot.active{
+        width: 35px;
+        border-radius: 14px;
+    }
+    .owl-dot.active,
+    .owl-dot:hover{
+        background: #22A7F0!important;
+    }
+
+    /*Experience*/
+
+    .experience_taital {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        color: #fff;
+        font-weight: bold;
+        position: relative;
+        padding-top: 40px;
+        text-align: center;
+    }
+    
+    .experience_taital::after {
+        content: '';
+        width: 80px;
+        height: 6px;
+        background-color: #e5e8e8;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+.container-card{
+    perspective: 1000px;
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: animation-play-state 0.3s ease-in-out;
+}    
+
+/* Regla para pausar la animación al hacer hover */
+.container-card:hover .tarjeta {
+    animation-play-state: paused;
+}
+
+
+.tarjeta{
+    width: 150px;
+    height: 200px;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+    transition: transform 0.8 ease-in-out;
+    transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px);
+    cursor: pointer;
+    animation: Carrusel 12s linear infinite;
+}
+
+
+@keyframes Carrusel
+{
+    from{
+        transform:translate(-50%, -50%) rotateY(360deg) translateZ(200px);
+        z-index: 10;
+        opacity: 0.9;
+    }
+
+    50%{
+        z-index: -10;
+    }
+
+    to{
+        transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px);
+    }
+}
+
+.tarjeta h3{
+    color:#fff ;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, .5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    margin: 0;
+}
+
+ #sonero{
+    background-image: url(./images/guitarra.jpg);
+    background-size: cover;
+}
+
+ #sonero2{
+    background-image: url(./images/piano.jpg);
+    background-size: cover;
+    animation-delay: -2.4s;
+}
+
+#sonero3{
+    background-image: url(./images/piano.jpg);
+    background-size: cover;
+    animation-delay: -4.8s;
+}
+
+#sonero4{
+    background-image: url(./images/piano.jpg);
+    background-size: cover;
+    animation-delay: -7.2s;
+}
+
+#sonero5{
+    background-image: url(./images/piano.jpg);
+    background-size: cover;
+    animation-delay: -9.8s;
+}
+
+@media (max-width: 768px) {
+    .experience_taital {
+        font-size: 2.5rem; /* Título más pequeño en móvil */
+    }
+    .container-card {
+        width: 300px; /* Contenedor del carrusel más pequeño en móvil */
+        height: 200px;
+    }
+    .tarjeta {
+        width: 120px; /* Tarjetas más pequeñas en móvil */
+        height: 160px;
+        transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px); /* Ajustar translateZ */
+        animation: CarruselMobile 8s linear infinite; /* Animación específica para móvil si es necesario */
+    }
+    /* Si necesitas una animación diferente para móvil, define CarruselMobile */
+    @keyframes CarruselMobile {
+        from {
+            transform: translate(-50%, -50%) rotateY(360deg) translateZ(150px);
+        }
+        50% {
+            z-index: -10;
+        }
+        to {
+            transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
+        }
+    }
+}

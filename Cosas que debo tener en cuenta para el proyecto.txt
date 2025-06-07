@@ -1,0 +1,43 @@
+Cosas importantes que debe de tener la landing de Nela
+
+Un lugar donde tener todos los enlaces a las redes sociales y redireccionar
+
+Una forma de contactarse por whatsapp para poder hacer pedidos
+
+Un apartado con los productos que vende, que pueda categorizarse y organizarse
+
+Una parte donde hable del negocio y de quién es 
+
+Consideraciones
+
+Los pagos debe de decirlos ella misma, es mejor 
+
+Es preferible que en el botón de whatsapp abra la aplicación del cliente y muestre el número de teléfono
+
+Debe de tener un diseño atractivo que concuerde con la imagen del negocio, que sea responsive, dinámico
+
+
+Cosas que debo de modificar actualmente
+
+Conseguir una paleta de colores
+
+Los botones de ordene ya, debo de darle unos estilos más interactivos
+
+Colocar la imagen de una dona en el banner que gire y tenga una animación
+
+Colocar una animación para el scroll donde aparezcan los elementos de forma secuencial
+
+Debo arreglar el carrusel para que se vea bien, hacer que los indicadores se vean bien, colocarle 
+unas flechas para cambiar entre imágenes, y que pasen entre ellas de forma automática
+
+Debo de arreglar la galería de productos y hacer que se vea bien, a parte de colocar los nombres y precios
+y un botón de ordenar ya
+
+Colocar las redes sociales de una forma atractiva, que sea más interactivo y colocar los enlaces correspondientes
+
+Hacer que lo del whatsapp funcione y darle los estilos que quiero
+
+Aregglar el footer y colocar mi logo con un enlace a mi portafolio
+
+Darle unos mejores retoques al botón de ir arriba
+
