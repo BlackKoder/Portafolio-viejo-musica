@@ -165,7 +165,7 @@ a {
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 3px 15px;
     font-size: 18px;
-    color: #a7a6a6;
+    color: #e66916;
     margin: 0px 6px;
 }
 
@@ -173,12 +173,12 @@ a {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #e5e8e8;
+    color: #ff802b;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #e5e8e8;
+    color: #ff802b;
 }
 
 .navbar-brand {
@@ -201,6 +201,10 @@ a {
     width: 100%;
     float: left;
     padding: 50px 0px 145px 0px;
+}
+
+.banner_section .container{
+    margin-bottom: 150px;
 }
 
 .banner_img{
@@ -236,12 +240,21 @@ a {
     padding-top: 20px;
 }
 
+.started_text2 {
+    margin-left: 43.3%;
+    width: 170px;
+    float: left;
+    padding-top: 20px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
 .started_text a{
     width: 100%;
     float: left;
     padding: 8px 10px;
     color: #ffffff;
-    background-color: #abadad;
+    background-color: #e66916;
     text-align: center;
     font-size: 18px;
     border-radius: 5px;
@@ -258,7 +271,7 @@ a {
     content: "";
 	width: 100%;
 	height: 300px;
-	background: #c7c9c9;
+	background: #ff802b;
 	position: absolute;
 	z-index: 1;
 	top: -300px;
@@ -270,6 +283,42 @@ a {
 .started_text a:hover::after {
     top: 0;
 }
+
+.started_text2 a{
+    width: 100%;
+    float: left;
+    padding: 8px 10px;
+    color: #ffffff;
+    background-color: #e66916;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.started_text2 a span{
+    z-index: 2;
+    position: relative;
+}
+
+.started_text2 a::after {
+    content: "";
+	width: 100%;
+	height: 300px;
+	background: #ff802b;
+	position: absolute;
+	z-index: 1;
+	top: -300px;
+	left: 0;
+	transition: .4s ease-in-out all;
+	border-radius: 0px 0px 300px 300px;
+}
+
+.started_text2 a:hover::after {
+    top: 0;
+}
+
 
 /* Animación de latido */
 @keyframes latidoBoton {
@@ -333,7 +382,7 @@ a {
     content: '';
     width: 80px;
     height: 6px;
-    background-color: #abadad;
+    background-color: #e66916;
     border-radius: 4px;
     margin-top: 10px;
 }
@@ -367,7 +416,7 @@ a {
     content: '';
     width: 80px;
     height: 6px;
-    background-color: #abadad;
+    background-color: #e66916;
     border-radius: 4px;
     margin-top: 10px;
 }
@@ -530,17 +579,17 @@ a {
     font-size: 1.2em;
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
-    color: #212529;
-    background-color: #abadad;
-    border-color: #9e9c9d;
+    color: #111111;
+    background-color: #e66916;
+    border-color: #d35d0f;
     animation: latidoBoton 1.5s infinite ease-in-out;
 }
 
 #irArribaBtn:hover {
     opacity: 1;
-    color: #212529;
-    background-color: #c7c9c9;
-    border-color: #d3cace;
+    color: #111;
+    background-color: #ff802b;
+    border-color: #ff771d;
 }
 
 #irArribaBtn i { /* Estilo para el icono (Font Awesome) */
@@ -548,10 +597,10 @@ a {
 }
 
 #irArribaBtn:focus {
-  color: #212529;
-  background-color: #ff6fb0;
-    border-color: #ff6fb0;
-  box-shadow: 0 0 0 0.2rem rgba(255, 111, 176, .5);
+  color: #111;
+  background-color: #ff6f10;
+    border-color: #ff6d0c;
+  box-shadow: 0 0 0 0.2rem rgba(230, 129, 35, 0.5);
 }
 
 /* Estilos para el botón de WhatsApp (fijo a la derecha y arriba del botón Ir Arriba) */
@@ -704,7 +753,7 @@ header .categorias a.activo {
 	position: relative;
 }
 
-.grid .item img {
+.grid .item img, video {
 	width: 100%;
 	cursor: pointer;
 	vertical-align: top;
@@ -732,7 +781,7 @@ header .categorias a.activo {
 	display: flex;
 }
 
-.overlay img {
+.overlay img, video {
 	max-width: 100%;
 }
 
@@ -802,10 +851,10 @@ header .categorias a.activo {
 	
 	
 	.social ul li .icon-whats {background: #25D366;}
-	.social ul li .icon-mail {background: #ae181f;}
+	.social ul li .icon-mail {background: #d35400;}
 
 	.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		background: #111111; /* Cambiamos el fondo cuando el usuario pase el mouse */
 		padding: 10px 50px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 	}
 
@@ -889,7 +938,7 @@ header .categorias a.activo {
         content: '';
         width: 80px;
         height: 6px;
-        background-color: #e5e8e8;
+        background-color: #e66916;
         border-radius: 4px;
         margin-top: 10px;
     }
@@ -993,7 +1042,28 @@ header .categorias a.activo {
     animation-delay: -9.8s;
 }
 
+#section-about1 #titulo-about{
+    display: none;
+}
+
 @media (max-width: 768px) {
+    #section-about1 #titulo-about{
+        order: 1;
+        display: flex;
+    }
+
+    #section-about1 #titulo-about2{
+        display: none;
+    }
+
+    #section-about2{
+        order: 2;
+    }
+
+    #section-about1{
+        order: 3;
+    }
+
     .experience_taital {
         font-size: 2.5rem; /* Título más pequeño en móvil */
     }
@@ -1018,5 +1088,85 @@ header .categorias a.activo {
         to {
             transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px);
         }
+    }
+}
+
+.pentagram-svg {
+    position: absolute;
+    width: 90%; /* Ancho responsivo */
+    max-width: 900px;
+    height: auto;
+    overflow: visible; /* Importante para la clave de sol fuera del viewBox */
+}
+
+/* Estilos de las líneas del pentagrama */
+.pentagram-line {
+    stroke: #ffffff; /* Color blanco */
+    stroke-width: 2; /* Grosor de la línea */
+    opacity: 0.7;
+}
+
+/* Animación de resplandor para la clave de sol */
+#g-clef {
+    fill: #d4d4d4; /* Color de la clave de sol */
+    filter: drop-shadow(0 0 5px #b8b5b3) drop-shadow(0 0 15px #d8d7d6); /* Efecto de resplandor inicial */
+    animation: glow 3s infinite alternate ease-in-out; /* Animación de pulso */
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px #fffdfc) drop-shadow(0 0 15px #d6d4d2);
+        opacity: 0.8;
+    }
+    to {
+        filter: drop-shadow(0 0 10px #d8d5d2) drop-shadow(0 0 25px #c4c1be);
+        opacity: 1;
+    }
+}
+
+/* Estilo de las letras (notas) */
+.note-letter {
+    font-family: 'Arial Black', sans-serif; /* Fuente impactante para las letras */
+    font-size: 50px; /* Tamaño de la letra */
+    fill: #ffffff; /* Color de la letra */
+    cursor: pointer; /* Indica que es clicable */
+    transition: fill 0.2s ease, transform 0.2s ease; /* Transición suave al interactuar */
+}
+
+.note-letter:hover {
+    fill: #ffe0b2; /* Color al pasar el ratón */
+    transform: scale(1.1); /* Ligero aumento de tamaño */
+}
+
+.note-letter.playing {
+    fill: #ff6f00; /* Color naranja brillante al tocar */
+    transform: scale(1.2); /* Más grande al tocar */
+    filter: drop-shadow(0 0 3px #ff6f00) drop-shadow(0 0 8px #ff6f00); /* Resplandor al tocar */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .hero-container {
+        height: 300px; /* Menor altura en pantallas pequeñas */
+    }
+    .note-letter {
+        font-size: 35px; /* Menor tamaño de letra */
+    }
+    #g-clef {
+        transform: scale(0.8); /* Clave de sol más pequeña */
+        transform-origin: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        height: 250px;
+        border-radius: 10px;
+    }
+    .note-letter {
+        font-size: 25px;
+    }
+    .pentagram-line {
+        stroke-width: 1.5; /* Líneas más finas */
     }
 }

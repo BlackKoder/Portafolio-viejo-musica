@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="https://unpkg.com/tone@14.7.58/build/Tone.min.js"></script>
 </head>
 <body>
     <!--Header start-->
@@ -66,13 +67,41 @@
      <div class="banner_section layout_padding" style="background: #111;">
       <div class="container">
             <div class="row">
-               <div class="col-sm-6">
-                        <h1 class="banner_taital">Hola, soy </h1>
+               <div class="col-md-12">
+                     
+                  <svg class="pentagram-svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet">
+                     <!-- Líneas del Pentagrama -->
+                     <line x1="0" y1="50" x2="900" y2="50" class="pentagram-line" />
+                     <line x1="0" y1="80" x2="900" y2="80" class="pentagram-line" />
+                     <line x1="0" y1="110" x2="900" y2="110" class="pentagram-line" />
+                     <line x1="0" y1="140" x2="900" y2="140" class="pentagram-line" />
+                     <line x1="0" y1="170" x2="900" y2="170" class="pentagram-line" />
+         
+                     <!-- Clave de Sol (Path SVG) -->
+                     <!-- La clave de sol se posiciona y escala de forma que quede sobre las líneas -->
+                     <path id="g-clef" d="M20,120 C20,100 40,80 60,80 C80,80 100,100 100,120 C100,140 80,160 60,160 C40,160 20,140 20,120 Z M60,160 C60,160 70,170 70,180 C70,190 60,200 50,200 C40,200 30,190 30,180 C30,170 40,160 40,160 Z M50,200 L50,120 C50,90 30,70 10,70 L0,70 L0,50 C20,50 40,60 50,80 L50,110 L50,10 C50,10 60,0 70,0 C80,0 90,10 90,20 L90,120 C90,120 100,110 110,110 C120,110 130,120 130,130 C130,140 120,150 110,150 C100,150 90,140 90,130 Z M50,10 L50,80 Z" transform="scale(0.8) translate(20, -10)" />
+         
+                     <!-- Nombre del Dueño del Portafolio - Cada letra es una "nota" clicable -->
+                     <!-- Ajusta el nombre y las posiciones (x, y) para que queden sobre el pentagrama -->
+                     <!-- La propiedad 'data-note' asigna la nota musical a cada letra -->
+                     <text x="180" y="120" class="note-letter" data-note="C4">V</text>
+                     <text x="230" y="140" class="note-letter" data-note="D4">e</text>
+                     <text x="280" y="120" class="note-letter" data-note="E4">n</text>
+                     <text x="330" y="140" class="note-letter" data-note="F4">t</text>
+                     <text x="380" y="120" class="note-letter" data-note="G4">u</text>
+                     <text x="430" y="140" class="note-letter" data-note="A4">r</text>
+                     <text x="480" y="120" class="note-letter" data-note="B4">a</text>
+         
+                     <!--<text x="560" y="140" class="note-letter" data-note="C5">F</text>
+                     <text x="610" y="120" class="note-letter" data-note="D5">i</text>
+                     <text x="660" y="140" class="note-letter" data-note="E5">o</text>
+                     <text x="710" y="120" class="note-letter" data-note="F5">r</text>
+                     <text x="760" y="140" class="note-letter" data-note="G5">e</e>
+                     <text x="810" y="120" class="note-letter" data-note="A5">n</text>
+                     <text x="860" y="140" class="note-letter" data-note="B5">z</text>
+                     <text x="910" y="120" class="note-letter" data-note="C6">o</text>-->
+                 </svg>        
                         
-                        
-                     </div>
-                     <div class="col-sm-6">
-                        <div class="banner_img"></div>
                </div>
             </div>
       </div>
@@ -83,13 +112,14 @@
    <div id="acerca" class="about_section layout_padding">
       <div class="container">
          <div class="row">
-            <div class="col-md-6">
-               <h1 class="about_taital">Acerca de mí</h1>
-               <p class="about_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aliquam odio, eaque beatae laborum sit soluta ipsum! Minima, necessitatibus blanditiis! Inventore architecto similique earum aliquam sequi laudantium at ducimus sapiente.</p>
+            <div class="col-md-6" id="section-about1">
+               <h1 class="about_taital" id="titulo-about">Acerca de mí</h1>
+               <h1 class="about_taital" id="titulo-about2">Acerca de mí</h1>
+               <p class="about_text">Soy Ventura Fiorenzo, un músico apasionado y en constante desarrollo, con una sólida trayectoria dedicada al mundo de la música. He sido miembro de grupos reconocidos como El Sonero de la Gaita y el Son Sonero. Me dedico a la enseñanza de mis alumnos para que puedan incursionar en el mundo de la música. </p>
                   <div class="started_text"><a href="#"><span>Ver Biografía</span></a></div>   
             </div>
-            <div class="col-md-6">
-               <div class="about_img"><img src="images/bio.jpg"></div>
+            <div class="col-md-6" id="section-about2">
+               <div class="about_img"><img loading="lazy" src="images/bio.jpg"></div>
             </div>
          </div>
       </div>
@@ -138,73 +168,13 @@
                   </header>
 
                   <section class="grid" id="grid">
-                     <div class="item" 
-                         data-categoria="guitarra"
-                         data-etiquetas="dulces"
-                         data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/guitarra.jpg" alt="">
-                        </div>
-                     </div>
-            
-                     <div class="item"
-                         data-categoria="guitarra"
-                         data-etiquetas="personas mujeres"
-                         data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/guitarra.jpg" alt="">
-                        </div>
-                     </div>
-            
-                     <div class="item"
-                         data-categoria="guitarra"
-                         data-etiquetas="paisajes montañas mar playas"
-                         data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/guitarra.jpg" alt="">
-                        </div>
-                     </div>
-            
-                     <div class="item"
-                         data-categoria="piano"
-                         data-etiquetas="animales leones"
-                         data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/piano.jpg" alt="">
-                        </div>
-                     </div>
-            
-                     <div class="item"
-                         data-categoria="piano"
-                         data-etiquetas="animales pandas"
-                         data-descripcion="5.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/piano.jpg" alt="">
-                        </div>
-                     </div>
-            
-                     <div class="item"
-                         data-categoria="piano"
-                         data-etiquetas="personas mujeres"
-                         data-descripcion="6.- Lorem ipsum dolor sit amet consectetur."
-                     >
-                        <div class="item-contenido">
-                           <img src="images/piano.jpg" alt="">
-                        </div>
-                     </div>
-            
                      <div class="item"
                          data-categoria="trompeta"
                          data-etiquetas="paisajes montañas niebla"
                          data-descripcion="7.- Lorem ipsum dolor sit amet consectetur."
                      >
                         <div class="item-contenido">
-                           <img src="images/trompeta.jpg" alt="">
+                           <video src="./video/Trompeta1.mp4" loading="lazy" controls="true"></video>
                         </div>
                      </div>
             
@@ -214,7 +184,7 @@
                          data-descripcion="8.- Lorem ipsum dolor sit amet consectetur."
                      >
                         <div class="item-contenido">
-                           <img src="images/trompeta.jpg" alt="">
+                           <video src="./video/Trompeta2.mp4" loading="lazy" controls="true"></video>
                         </div>
                      </div>
             
@@ -225,23 +195,186 @@
                             "
                      >
                         <div class="item-contenido">
-                           <img src="images/trompeta.jpg" alt="">
+                           <video src="./video/Trompeta3.mp4" loading="lazy" controls="true"></video>
                         </div>
                      </div>
 
+                     <div class="item"
+                         data-categoria="trompeta"
+                         data-etiquetas="paisajes montañas niebla"
+                         data-descripcion="7.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Trompeta4.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item" 
+                         data-categoria="trompeta"
+                         data-etiquetas="ciudades paisajes carreteras"
+                         data-descripcion="8.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Trompeta5.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="trompeta"
+                         data-etiquetas="naturaleza hojas plantas"
+                         data-descripcion="9.- Lorem ipsum dolor sit amet consectetur.
+                            "
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Trompeta6.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+
+                     <div class="item" 
+                         data-categoria="guitarra"
+                         data-etiquetas="dulces"
+                         data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra1.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="guitarra"
+                         data-etiquetas="personas mujeres"
+                         data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra2.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="guitarra"
+                         data-etiquetas="paisajes montañas mar playas"
+                         data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra3.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+
+                     <div class="item" 
+                         data-categoria="guitarra"
+                         data-etiquetas="dulces"
+                         data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra4.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="guitarra"
+                         data-etiquetas="personas mujeres"
+                         data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra5.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="guitarra"
+                         data-etiquetas="paisajes montañas mar playas"
+                         data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra6.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+
+                     <div class="item"
+                         data-categoria="guitarra"
+                         data-etiquetas="paisajes montañas mar playas"
+                         data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Guitarra7.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="animales leones"
+                         data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano1.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="animales pandas"
+                         data-descripcion="5.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano2.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="personas mujeres"
+                         data-descripcion="6.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano3.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
                      
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="animales leones"
+                         data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano4.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="animales pandas"
+                         data-descripcion="5.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano5.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>
+            
+                     <div class="item"
+                         data-categoria="piano"
+                         data-etiquetas="personas mujeres"
+                         data-descripcion="6.- Lorem ipsum dolor sit amet consectetur."
+                     >
+                        <div class="item-contenido">
+                           <video src="./video/Piano6.mp4" loading="lazy" controls="true"></video>
+                        </div>
+                     </div>  
                   </section>
                </div>   
             </div>
          </div>
       </div>
    </div>
+   <div class="started_text2"><a href="#"><span>Certificaciones</span></a></div>  
    <!-- products section end -->
+
+
 
    <section class="overlay" id="overlay">
       <div class="contenedor-img">
          <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
          <img src="" alt="">
+         <video id="overlayVideoPlayer" src=""></video>
       </div>
       <p class="descripcion"></p>
    </section>
@@ -300,6 +433,7 @@
     <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
 	 <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
     <script src="index.js"></script>
+    <script src="audio.js"></script>
     <script src="carrusel.js"></script>
     <script src="grid.js"></script>
 </body>
