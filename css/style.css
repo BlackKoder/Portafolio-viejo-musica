@@ -467,7 +467,6 @@ a {
 /*social section start*/
 .social_section {
     background-color: #111111;
-    background-image: url("../images/patrón.png");
     width: 100%;
     padding: 90px 0px 145px 0px;
     display: flex;
@@ -1214,3 +1213,6 @@ header .categorias a.activo {
           z-index: 1;
           opacity: .58;
         }
+
+
+        
