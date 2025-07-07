@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio Ventura</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!--Normalize CSS-->
@@ -26,7 +26,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
@@ -44,7 +46,7 @@
               <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <ul class="navbar-nav ml-auto">
+                 <ul class="navbar-nav ml-auto" style="z-index: 2;">
                     <li class="nav-item active">
                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
@@ -66,44 +68,17 @@
      <!-- banner section start --> 
      <div class="banner_section layout_padding" style="background: #111;">
       <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                     
-                  <svg class="pentagram-svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet">
-                     <!-- Líneas del Pentagrama -->
-                     <line x1="0" y1="50" x2="900" y2="50" class="pentagram-line" />
-                     <line x1="0" y1="80" x2="900" y2="80" class="pentagram-line" />
-                     <line x1="0" y1="110" x2="900" y2="110" class="pentagram-line" />
-                     <line x1="0" y1="140" x2="900" y2="140" class="pentagram-line" />
-                     <line x1="0" y1="170" x2="900" y2="170" class="pentagram-line" />
-         
-                     <!-- Clave de Sol (Path SVG) -->
-                     <!-- La clave de sol se posiciona y escala de forma que quede sobre las líneas -->
-                     <path id="g-clef" d="M20,120 C20,100 40,80 60,80 C80,80 100,100 100,120 C100,140 80,160 60,160 C40,160 20,140 20,120 Z M60,160 C60,160 70,170 70,180 C70,190 60,200 50,200 C40,200 30,190 30,180 C30,170 40,160 40,160 Z M50,200 L50,120 C50,90 30,70 10,70 L0,70 L0,50 C20,50 40,60 50,80 L50,110 L50,10 C50,10 60,0 70,0 C80,0 90,10 90,20 L90,120 C90,120 100,110 110,110 C120,110 130,120 130,130 C130,140 120,150 110,150 C100,150 90,140 90,130 Z M50,10 L50,80 Z" transform="scale(0.8) translate(20, -10)" />
-         
-                     <!-- Nombre del Dueño del Portafolio - Cada letra es una "nota" clicable -->
-                     <!-- Ajusta el nombre y las posiciones (x, y) para que queden sobre el pentagrama -->
-                     <!-- La propiedad 'data-note' asigna la nota musical a cada letra -->
-                     <text x="180" y="120" class="note-letter" data-note="C4">V</text>
-                     <text x="230" y="140" class="note-letter" data-note="D4">e</text>
-                     <text x="280" y="120" class="note-letter" data-note="E4">n</text>
-                     <text x="330" y="140" class="note-letter" data-note="F4">t</text>
-                     <text x="380" y="120" class="note-letter" data-note="G4">u</text>
-                     <text x="430" y="140" class="note-letter" data-note="A4">r</text>
-                     <text x="480" y="120" class="note-letter" data-note="B4">a</text>
-         
-                     <!--<text x="560" y="140" class="note-letter" data-note="C5">F</text>
-                     <text x="610" y="120" class="note-letter" data-note="D5">i</text>
-                     <text x="660" y="140" class="note-letter" data-note="E5">o</text>
-                     <text x="710" y="120" class="note-letter" data-note="F5">r</text>
-                     <text x="760" y="140" class="note-letter" data-note="G5">e</e>
-                     <text x="810" y="120" class="note-letter" data-note="A5">n</text>
-                     <text x="860" y="140" class="note-letter" data-note="B5">z</text>
-                     <text x="910" y="120" class="note-letter" data-note="C6">o</text>-->
-                 </svg>        
-                        
-               </div>
-            </div>
+            <div class="video-background">
+                     <video autoplay="true" loop = "true" muted="true">
+                        <source src="./video/Video-hero.mp4" type="">
+                     </video>
+                  </div>       
+
+                  <div class="video-opacity"></div>
+
+                  <div class="content-video">
+                        <h1>Ventura Fiorenzo</h1>
+                  </div>
       </div>
    </div>
    <!-- banner section end -->
@@ -116,7 +91,7 @@
                <h1 class="about_taital" id="titulo-about">Acerca de mí</h1>
                <h1 class="about_taital" id="titulo-about2">Acerca de mí</h1>
                <p class="about_text">Soy Ventura Fiorenzo, un músico apasionado y en constante desarrollo, con una sólida trayectoria dedicada al mundo de la música. He sido miembro de grupos reconocidos como El Sonero de la Gaita y el Son Sonero. Me dedico a la enseñanza de mis alumnos para que puedan incursionar en el mundo de la música. </p>
-                  <div class="started_text"><a href="#"><span>Ver Biografía</span></a></div>   
+                  <div class="started_text"><a target="_blank" href="https://drive.google.com/file/d/1i3SdGoP48H4Do8ae584zogjH5pjUSoRD/view?usp=sharing"><span>Ver Biografía</span></a></div>   
             </div>
             <div class="col-md-6" id="section-about2">
                <div class="about_img"><img loading="lazy" src="images/bio.jpg"></div>
@@ -365,7 +340,7 @@
          </div>
       </div>
    </div>
-   <div class="started_text2"><a href="#"><span>Certificaciones</span></a></div>  
+   <div class="started_text2"><a target="_blank" href="https://drive.google.com/file/d/1tWzKN0MW4nPhyAHtL00A4ZWvpTgqHvuo/view?usp=sharing"><span>Certificaciones</span></a></div>  
    <!-- products section end -->
 
 
