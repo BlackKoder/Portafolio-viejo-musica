@@ -1260,3 +1260,10 @@ header .categorias a.activo {
 .swiper-button-prev{
     left: 26px !important;
 }
+
+@media screen and (max-width: 600px){
+    .container-card{
+        margin-bottom: 600px;
+        margin-top: 560px;
+    }
+}
